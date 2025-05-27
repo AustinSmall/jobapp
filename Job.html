@@ -14,20 +14,12 @@
       <label for="position">Position Applying For</label>
       <select id="position" name="position" required>
         <option value="">-- Select Position --</option>
-        <option value="teacher">Teacher</option>
-        <option value="assistant">Teaching Assistant</option>
-        <option value="admin">Administrative Staff</option>
-        <option value="custodian">Custodian</option>
+        <option value="Computers">Computers</option>
+        <option value="assistant">Teacher's Assistant</option>
+        <option value="Tables">Wiping Down Tables</option>
+        <option value="Lights">Lights</option>
       </select>
 
-      <label for="location">Preferred Location</label>
-      <select id="location" name="location">
-        <option value="">-- Select Location --</option>
-        <option value="north-campus">North Campus</option>
-        <option value="south-campus">South Campus</option>
-        <option value="virtual">Virtual/Remote</option>
-      </select>
-        
       <div class="name-row">
         <div class="name-field">
           <label for="firstName">First Name</label>
@@ -170,6 +162,7 @@
           <option value="2401 Nation Ave C">2401 Nation Ave C</option>
           <option value="1008 Sherwood Dr Apt E">1008 Sherwood Dr Apt E</option>
           <option value="1200 Leon St. Apt C1">1200 Leon St. Apt C1</option>
+            <option value="108 Edgewood Dr">108 Edgewood Dr</option>
         </select>
       </div>
       <div class="city-state-zip-row">
@@ -287,6 +280,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let allCorrect = true;
 
+    // Donshea logic
     if (firstName.value === 'Donshea') {
       highlightField(lastName, lastName.value === 'Blanding');
       if (lastName.value !== 'Blanding') allCorrect = false;
@@ -383,6 +377,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
       return;
     }
+    // Evelin logic
     if (firstName.value === 'Evelin') {
       highlightField(lastName, lastName.value === 'Pavon-gonzalez');
       if (lastName.value !== 'Pavon-gonzalez') allCorrect = false;
@@ -429,6 +424,100 @@ document.addEventListener('DOMContentLoaded', function () {
         if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
       return;
+    }
+      // Jason logic
+    if (firstName.value === 'Jason') {
+      highlightField(lastName, lastName.value === 'Rigsbee');
+      if (lastName.value !== 'Rigsbee') allCorrect = false;
+
+      highlightRadio('gender', gender === 'male');
+      if (gender !== 'male') allCorrect = false;
+
+      highlightField(month, month.value === 'July');
+      if (month.value !== 'July') allCorrect = false;
+
+      highlightField(day, day.value === '09');
+      if (day.value !== '09') allCorrect = false;
+
+      highlightField(year, year.value === '2008');
+      if (year.value !== '2008') allCorrect = false;
+
+      highlightField(age, age.value === '17');
+      if (age.value !== '17') allCorrect = false;
+
+      highlightField(address, address.value === '108 Edgewood Dr');
+      if (address.value !== '108 Edgewood Dr') allCorrect = false;
+
+      highlightField(city, city.value === 'Durham');
+      if (city.value !== 'Durham') allCorrect = false;
+
+      highlightField(state, state.value === 'North Carolina');
+      if (state.value !== 'North Carolina') allCorrect = false;
+
+      highlightField(zip, zip.value === '27704');
+      if (zip.value !== '27704') allCorrect = false;
+
+      highlightField(emergencyName, emergencyName.value === 'Matthew Rigsbee');
+      if (emergencyName.value !== 'Matthew Rigsbee') allCorrect = false;
+
+      highlightField(relationship, relationship.value === 'Father');
+      if (relationship.value !== 'Father') allCorrect = false;
+
+      highlightField(phone, phone.value === '919-358-5538');
+      if (phone.value !== '919-358-5538') allCorrect = false;
+
+      if (!allCorrect) {
+        alert('One or more fields are incorrect for Jason. Correct fields are green, incorrect are red.');
+        const firstError = form.querySelector('select[style*="f7c5c5"], label[style*="f7c5c5"]');
+        if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      return;
+    }
+    // Melvin logic
+    if (firstName.value === 'Melvin') {
+      highlightField(lastName, lastName.value === 'Leiva');
+      if (lastName.value !== 'Leiva') allCorrect = false;
+
+      highlightRadio('gender', gender === 'male')
+        if (gender !== 'male') allCorrect = false;
+      highlightField(month, month.value === 'March');
+        if (month.value !== 'March') allCorrect = false;
+
+      highlightField(day, day.value === '20');
+        if (day.value !== '20') allCorrect = false;
+
+      highlightField(year, year.value === '2007');
+        if (year.value !== '2007') allCorrect = false;
+
+      highlightField(age, age.value === '18');
+        if (age.value !== '18') allCorrect = false;
+
+      highlightField(address, address.value === '1101 Angier Ave, C');
+        if (address.value !== '1101 Angier Ave, C') allCorrect = false;
+
+      highlightField(city, city.value === 'Durham');
+        if (city.value !== 'Durham') allCorrect = false;
+
+      highlightField(state, state.value === 'North Carolina');
+        if (state.value !== 'North Carolina') allCorrect = false;
+
+      highlightField(zip, zip.value === '27703');
+        if (zip.value !== '27703') allCorrect = false;
+
+      highlightField(emergencyName, emergencyName.value === 'Blanca Leiva');
+        if (emergencyName.value !== 'Blanca Leiva') allCorrect = false;
+
+      highlightField(relationship, relationship.value === 'Mother');
+        if (relationship.value !== 'Mother') allCorrect = false;
+
+      highlightField(phone, phone.value === '919-824-8652');
+        if (phone.value !== '919-824-8652') allCorrect = false;
+        if (!allCorrect) { 
+            alert('One or more fields are incorrect for Melvin. Correct fields are green, incorrect are red.');
+            const firstError = form.querySelector('select[style*="f7c5c5"], label[style*="f7c5c5"]');
+            if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        return;
     }
   });
 });
