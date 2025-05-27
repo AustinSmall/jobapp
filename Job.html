@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="style.css">
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Application Form</title>
+</head>
+<body>
+  <div class="container">
+    <h2>Job Application Form</h2>
+    <form action="YOUR_BACKEND_ENDPOINT" method="POST" enctype="multipart/form-data">
+      
+      <label for="position">Position Applying For</label>
+      <select id="position" name="position" required>
+        <option value="">-- Select Position --</option>
+        <option value="teacher">Teacher</option>
+        <option value="assistant">Teaching Assistant</option>
+        <option value="admin">Administrative Staff</option>
+        <option value="custodian">Custodian</option>
+      </select>
+
+      <label for="location">Preferred Location</label>
+      <select id="location" name="location">
+        <option value="">-- Select Location --</option>
+        <option value="north-campus">North Campus</option>
+        <option value="south-campus">South Campus</option>
+        <option value="virtual">Virtual/Remote</option>
+      </select>
+        
+      <div class="name-row">
+        <div class="name-field">
+          <label for="firstName">First Name</label>
+          <select id="firstName" name="firstName">
+            <option value="">-- Select First Name --</option>
+            <option value="firstName">DeShaun</option>
+            <option value="firstName">Donshea</option>
+            <option value="firstName">Evelin</option>
+            <option value="firstName">Jason</option>
+            <option value="firstName">Melvin</option>
+          </select>
+        </div>
+        <div class="name-field">
+          <label for="lastName">Last Name</label>
+          <select id="lastName" name="lastName">
+            <option value="">-- Select Last Name --</option>
+            <option value="lastName">Blanding</option>
+            <option value="lastName">Dorty</option>
+            <option value="lastName">Leiva</option>
+            <option value="lastName">Pavon-gonzalez</option>
+            <option value="lastName">Rigsbee</option>
+          </select>
+        </div>
+      </div>
+
+      <label>Gender</label>
+      <div style="margin-bottom: 15px;">
+        <label style="margin-right: 15px;">
+          <input type="radio" name="gender" value="male" required> Male
+        </label>
+        <label style="margin-right: 15px;">
+          <input type="radio" name="gender" value="female"> Female
+        </label>
+        <label>
+          <input type="radio" name="gender" value="nonbinary"> Nonbinary
+        </label>
+      </div>
+
+      <label>Date of Birth</label>
+      <div class="dob-row">
+        <div class="dob-field">
+          <label for="month">Month</label>
+          <select id="month" name="month">
+            <option value="month">-- Select Month --</option>
+            <option value="month">January</option>
+            <option value="month">February</option>
+            <option value="month">March</option>
+            <option value="month">April</option>
+            <option value="month">May</option>
+            <option value="month">June</option>
+            <option value="month">July</option>
+            <option value="month">August</option>
+            <option value="month">September</option>
+            <option value="month">October</option>
+            <option value="month">November</option>
+            <option value="month">December</option>
+          </select>
+        </div>
+        <div class="dob-field">
+          <label for="day">Day</label>
+          <select id="day" name="day">
+            <option value="day">-- Select Day --</option>
+            <option value="day">01</option>
+            <option value="day">02</option>
+            <option value="day">03</option>
+            <option value="day">04</option>
+            <option value="day">05</option>
+            <option value="day">06</option>
+            <option value="day">07</option>
+            <option value="day">08</option>
+            <option value="day">09</option>
+            <option value="day">10</option>
+            <option value="day">11</option>
+            <option value="day">12</option>
+            <option value="day">13</option>
+            <option value="day">14</option>
+            <option value="day">15</option>
+            <option value="day">16</option>
+            <option value="day">17</option>
+            <option value="day">18</option>
+            <option value="day">19</option>
+            <option value="day">20</option>
+            <option value="day">21</option>
+            <option value="day">22</option>
+            <option value="day">23</option>
+            <option value="day">24</option>
+            <option value="day">25</option>
+            <option value="day">26</option>
+            <option value="day">27</option>
+            <option value="day">28</option>
+            <option value="day">29</option>
+            <option value="day">30</option>
+            <option value="day">31</option>
+          </select>
+        </div>
+        <div class="dob-field">
+          <label for="year">Year</label>
+          <select id="year" name="year">
+            <option value="year">-- Select Year --</option>
+            <option value="year">2001</option>
+            <option value="year">2002</option>
+            <option value="year">2003</option>
+            <option value="year">2004</option>
+            <option value="year">2005</option>
+            <option value="year">2006</option>
+            <option value="year">2007</option>
+            <option value="year">2008</option>
+            <option value="year">2009</option>
+            <option value="year">2010</option>
+            <option value="year">2011</option>
+            <option value="year">2012</option>
+            <option value="year">2013</option>
+            <option value="year">2014</option>
+            <option value="year">2015</option>
+            <option value="year">2016</option>
+            <option value="year">2017</option>
+            <option value="year">2018</option>
+          </select>
+        </div>
+      </div>
+
+      <label for="age">Age</label>
+      <select id="age" name="age">
+        <option value="">-- Select Age --</option>
+        <option value="age">15</option>
+        <option value="age">16</option>
+        <option value="age">17</option>
+        <option value="age">18</option>
+        <option value="age">19</option>
+        <option value="age">20</option>
+        </select>
+
+      <label for="address">Address</label>
+      <div class="address-row">
+        <select id="address" name="address">
+          <option value="">-- Select Address --</option>
+          <option value="address">1509 Chapel Hill Rd</option>
+          <option value="address">126 Casterock Dr</option>
+          <option value="address">101 Angier Ave, C</option>
+          <option value="address">2401 Nation Ave C</option>
+          <option value="address">1008 Sherwood Dr Apt E</option>
+          <option value="address">1200 Leon St. Apt C1</option>
+        </select>
+      </div>
+      <div class="city-state-zip-row">
+        <div class="city-field">
+          <label for="city">City</label>
+          <select id="city" name="city">
+            <option value="">-- Select City --</option>
+            <option value="city">Durham</option>
+            <option value="city">Raleigh</option>
+            <option value="city">Chapel Hill</option>
+            <option value="city">Cary</option>
+          </select>
+        </div>
+        <div class="state-field">
+          <label for="state">State</label>
+          <select id="state" name="state">
+            <option value="">-- Select State --</option>
+            <option value="state">North Carolina</option>
+            <option value="state">South Carolina</option>
+            <option value="state">Virginia</option>
+            <option value="state">Georgia</option>
+          </select>
+        </div>
+        <div class="zip-field">
+          <label for="zip">Zip Code</label>
+          <select id="zip" name="zip">
+            <option value="">-- Select Zip Code --</option>
+            <option value="zip">27701</option>
+            <option value="zip">27703</option>
+            <option value="zip">27704</option>
+            <option value="zip">27705</option>
+            <option value="zip">27707</option>
+            <option value="zip">27713</option>
+          </select>
+        </div>
+      </div>
+
+        <label for="emergency-contact">Emergency Contact</label>
+        <label for="emergency-contact-name">Name</label>
+        <select id="emergency-contact-name" name="emergency-contact-name">
+          <option value="">-- Select Name --</option>
+          <option value="emergency-contact-name">Mary Blanding</option>
+          <option value="emergency-contact-name">Malissa Alston</option>
+          <option value="emergency-contact-name">Blanca Leiva</option>
+          <option value="emergency-contact-name">Matthew Rigsbee</option>
+          <option value="emergency-contact-name">Adela Pavon-gonzalez</option>
+        </select>
+
+        <label for="relationship">Relationship</label>
+        <select id="relationship" name="relationship">
+          <option value="">-- Select Relationship --</option>
+          <option value="relationship">Mother</option>
+          <option value="relationship">Father</option>
+          <option value="relationship">Sister</option>
+          <option value="relationship">Brother</option>
+          <option value="relationship">Grandmother</option>
+        </select>
+
+        <label for= "phone-number">Phone Number</label>
+        <select id="phone-number" name="phone-number">
+          <option value="">-- Select Phone Number --</option>
+          <option value="phone-number">919-808-0361</option>
+          <option value="phone-number">919-423-0485</option>
+          <option value="phone-number">919-824-5348</option>
+          <option value="phone-number">919-824-8652</option>
+          <option value="phone-number">919-592-4761</option>
+          <option value="phone-number">919-358-5538</option>
+          </select>
+
+
+      <button type="submit">Submit Application</button>      
+    </div>    
+    </body>  
+</form>      
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.querySelector('form');
+  const firstName = document.getElementById('firstName');
+
+  form.addEventListener('submit', function (e) {
+    if (firstName.value === 'Donshea') {
+      // Collect all required values
+      const lastName = document.getElementById('lastName').value;
+      const gender = form.querySelector('input[name="gender"]:checked')?.value;
+      const month = document.getElementById('month').value;
+      const day = document.getElementById('day').value;
+      const year = document.getElementById('year').value;
+      const age = document.getElementById('age').value;
+      const address = document.getElementById('address').value;
+      const city = document.getElementById('city').value;
+      const state = document.getElementById('state').value;
+      const zip = document.getElementById('zip').value;
+      const emergencyName = document.getElementById('emergency-contact-name').value;
+      const relationship = document.getElementById('relationship').value;
+      const phone = document.getElementById('phone-number').value;
+
+      // Check all conditions
+      if (
+        lastName !== 'Blanding' ||
+        gender !== 'male' ||
+        month !== 'May' ||
+        day !== '28' ||
+        year !== '2008' ||
+        age !== '16' ||
+        address !== '1509 Chapel Hill Rd' ||
+        city !== 'Durham' ||
+        state !== 'North Carolina' ||
+        zip !== '27701' ||
+        emergencyName !== 'Mary Blanding' ||
+        relationship !== 'Grandmother' ||
+        phone !== '919-808-0361'
+      ) {
+        e.preventDefault();
+        alert('One or more fields are incorrect for Donshea. Please check your selections.');
+      }
+    }
+  });
+});
+</script>
+</html>
