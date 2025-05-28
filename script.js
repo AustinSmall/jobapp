@@ -1,5 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.querySelector('form');
+
+  // Highlight all text inputs and selects green on page load
+  form.querySelectorAll('input[type="text"], select').forEach(el => {
+    el.style.backgroundColor = '#c8f7c5';
+  });
+
   const firstName = document.getElementById('firstName');
 
   // Helper to highlight fields
@@ -19,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     // Reset all highlights
-    form.querySelectorAll('select').forEach(el => el.style.backgroundColor = '');
+    form.querySelectorAll('input[type="text"], select').forEach(el => el.style.backgroundColor = '');
     form.querySelectorAll('input[type="radio"]').forEach(el => {
       if (el.parentElement) el.parentElement.style.backgroundColor = '';
     });
@@ -41,49 +47,49 @@ document.addEventListener('DOMContentLoaded', function () {
     let allCorrect = true;
 
     // Donshea logic
-    if (firstName.value === 'Donshea') {
-      highlightField(lastName, lastName.value === 'Blanding');
-      if (lastName.value !== 'Blanding') allCorrect = false;
+    if (norm(firstName.value) === 'donshea') {
+      highlightField(lastName, norm(lastName.value) === 'blanding');
+      if (norm(lastName.value) !== 'blanding') allCorrect = false;
 
       highlightRadio('gender', gender === 'male');
       if (gender !== 'male') allCorrect = false;
 
-      highlightField(month, month.value === 'May');
-      if (month.value !== 'May') allCorrect = false;
+      highlightField(month, norm(month.value) === 'may');
+      if (norm(month.value) !== 'may') allCorrect = false;
 
-      highlightField(day, day.value === '28');
-      if (day.value !== '28') allCorrect = false;
+      highlightField(day, norm(day.value) === '28');
+      if (norm(day.value) !== '28') allCorrect = false;
 
-      highlightField(year, year.value === '2008');
-      if (year.value !== '2008') allCorrect = false;
+      highlightField(year, norm(year.value) === '2008');
+      if (norm(year.value) !== '2008') allCorrect = false;
 
-      highlightField(age, age.value === '17');
-      if (age.value !== '17') allCorrect = false;
+      highlightField(age, norm(age.value) === '17');
+      if (norm(age.value) !== '17') allCorrect = false;
 
-      highlightField(address, address.value === '1509 Chapel Hill Rd');
-      if (address.value !== '1509 Chapel Hill Rd') allCorrect = false;
+      highlightField(address, norm(address.value) === '1509 chapel hill rd');
+      if (norm(address.value) !== '1509 chapel hill rd') allCorrect = false;
 
-      highlightField(city, city.value === 'Durham');
-      if (city.value !== 'Durham') allCorrect = false;
+      highlightField(city, norm(city.value) === 'durham');
+      if (norm(city.value) !== 'durham') allCorrect = false;
 
-      highlightField(state, state.value === 'North Carolina');
-      if (state.value !== 'North Carolina') allCorrect = false;
+      highlightField(state, norm(state.value) === 'north carolina');
+      if (norm(state.value) !== 'north carolina') allCorrect = false;
 
-      highlightField(zip, zip.value === '27701');
-      if (zip.value !== '27701') allCorrect = false;
+      highlightField(zip, norm(zip.value) === '27701');
+      if (norm(zip.value) !== '27701') allCorrect = false;
 
-      highlightField(emergencyName, emergencyName.value === 'Mary Blanding');
-      if (emergencyName.value !== 'Mary Blanding') allCorrect = false;
+      highlightField(emergencyName, norm(emergencyName.value) === 'mary blanding');
+      if (norm(emergencyName.value) !== 'mary blanding') allCorrect = false;
 
-      highlightField(relationship, relationship.value === 'Grandmother');
-      if (relationship.value !== 'Grandmother') allCorrect = false;
+      highlightField(relationship, norm(relationship.value) === 'grandmother');
+      if (norm(relationship.value) !== 'grandmother') allCorrect = false;
 
-      highlightField(phone, phone.value === '919-808-0361');
-      if (phone.value !== '919-808-0361') allCorrect = false;
+      highlightField(phone, norm(phone.value) === '919-808-0361');
+      if (norm(phone.value) !== '919-808-0361') allCorrect = false;
 
       if (!allCorrect) {
         alert('One or more fields are incorrect for Donshea. Correct fields are green, incorrect are red.');
-        const firstError = form.querySelector('select[style*="f7c5c5"], label[style*="f7c5c5"]');
+        const firstError = form.querySelector('input[style*="f7c5c5"], select[style*="f7c5c5"], label[style*="f7c5c5"]');
         if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
       return;
@@ -132,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (!allCorrect) {
         alert('One or more fields are incorrect for DeShaun. Correct fields are green, incorrect are red.');
-        const firstError = form.querySelector('select[style*="f7c5c5"], label[style*="f7c5c5"]');
+        const firstError = form.querySelector('input[style*="f7c5c5"], select[style*="f7c5c5"], label[style*="f7c5c5"]');
         if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
       return;
@@ -180,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (!allCorrect) {
         alert('One or more fields are incorrect for Evelin. Correct fields are green, incorrect are red.');
-        const firstError = form.querySelector('select[style*="f7c5c5"], label[style*="f7c5c5"]');
+        const firstError = form.querySelector('input[style*="f7c5c5"], select[style*="f7c5c5"], label[style*="f7c5c5"]');
         if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
       return;
@@ -228,7 +234,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (!allCorrect) {
         alert('One or more fields are incorrect for Jason. Correct fields are green, incorrect are red.');
-        const firstError = form.querySelector('select[style*="f7c5c5"], label[style*="f7c5c5"]');
+        const firstError = form.querySelector('input[style*="f7c5c5"], select[style*="f7c5c5"], label[style*="f7c5c5"]');
         if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
       return;
@@ -274,7 +280,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (phone.value !== '919-824-8652') allCorrect = false;
         if (!allCorrect) { 
             alert('One or more fields are incorrect for Melvin. Correct fields are green, incorrect are red.');
-            const firstError = form.querySelector('select[style*="f7c5c5"], label[style*="f7c5c5"]');
+            const firstError = form.querySelector('input[style*="f7c5c5"], select[style*="f7c5c5"], label[style*="f7c5c5"]');
             if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
         return;
