@@ -35,8 +35,8 @@ form.addEventListener('submit', function(event) {
     highlightField(year, year.value === '2008');
     if (year.value !== '2008') allCorrect = false;
 
-    highlightField(age, age.value === '17');
-    if (age.value !== '17') allCorrect = false;
+    highlightField(age, age.value === '16');
+    if (age.value !== '16') allCorrect = false;
 
     highlightField(address, address.value === '108 Edgewood Dr');
     if (address.value !== '108 Edgewood Dr') allCorrect = false;
